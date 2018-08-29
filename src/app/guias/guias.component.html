@@ -1,21 +1,8 @@
 <h2>Lista de Guìas</h2>
 <ul class="guias">
-    <li *ngFor="let guia of guias" [class.selected]="guia === selectedGuia" (click)="onSelect(guia)">
+    <li *ngFor="let guia of guias" [class.selected]="guia === selectedGuia"
+     (click)="onSelect(guia)">
         <span class="badge">{{guia.id}}</span> {{guia.name}}
     </li>
 </ul>
-<!--
-<div *ngIf="selectedHero">
-
-    <h2>{{selectedHero.name | uppercase}} Detalles</h2>
-    <div><span>id: </span>{{selectedHero.id}}</div>
-    <div>
-        <label>name:
-      <input [(ngModel)]="selectedHero.name" placeholder="name">
-    </label>
-        <div><span>Telefono: </span>{{selectedHero.telefono}}</div>
-    </div>
-
-</div>
--->
 <app-guia-detail [guia]="selectedGuia"></app-guia-detail>
